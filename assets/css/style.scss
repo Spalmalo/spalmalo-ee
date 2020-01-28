@@ -6,9 +6,10 @@ $dark-theme-white: #dee2e3;
 $dark-theme-grey: #454e61;
 $dark-theme-aquamarine: #4abec3;
 $dark-theme-orange: #f7835d;
+$dark-theme-number: #454e61;
 
 // light
-$light-theme-bg: #2f3542;
+$light-theme-bg: #ffffff;
 $light-theme-black: #636364;
 $light-theme-grey: #e3e3e3;
 $light-theme-blue: #0896c8;
@@ -20,82 +21,72 @@ $light-theme-pink: #e96a8d;
     src: url(../fonts/SF-PRO-TEXT-REGULAR.OTF);
 }
 
-h1::before{
-    content: attr(line) "\00a0\00a0\00a0..........................................";
-    color: $light-theme-grey;
-    font-size: 16px;
-    position: absolute;
-    left: -100px;
-    z-index: -10;
-    line-height: 56px;
-}
-h3::before{
-    content: attr(line) "\00a0\00a0\00a0..........................................";
-    color: $light-theme-grey;
-    font-size: 16px;
-    position: absolute;
-    left: -100px;
-    z-index: -10;
-    line-height: 29px;
-}
-h1{
-    font-size: 40px;
-    // margin: 9px 0;
-    // line-height: 56px !important;
-}
-h3{
-    margin-top: 10px;
-    font-size: 24px;
-    // line-height: 29px !important;
-
-}
-.comment{
-
-}
-p{
-    background: white;
-
-    padding: 0 20px;
-    &.tab1{
-        margin: 0 -20px;
-    }
-    &.tab2{
-        margin: 0 20px;
-    }
-    &.tab3{
-        margin: 0 60px;
-    }
-    &.tab4{
-        margin: 0 100px;
-    }
-}
-
-.logo img{
-    margin-bottom: 20px;
-}
-
-ol {
-    counter-reset: item;
-    margin-left: 0;
-    padding-left: 0;
-}
-li{
-    margin: 10px 0;
-}
-li:before {
-    display: marker;
-    content: counter(item) "\00a0\00a0\00a0\00a0.....................\00a0\00a0";
-    counter-increment: item;
-    width: 6em;
-    text-align: center;
-    color: $light-theme-grey;
-    font-size: 16px;
-}
-
 body {
     font-family: SFProTextRegular;
     font-size: 16px;
+    background: $light-theme-bg;
+    color: $light-theme-black;
+    h1 {
+        font-size: 40px;
+        &::before {
+            content: attr(line)
+                '\00a0\00a0\00a0..........................................';
+            font-size: 16px;
+            position: absolute;
+            left: 0px;
+            z-index: -10;
+            line-height: 56px;
+            color: $light-theme-grey;
 
+        }
+    }
+    h3 {
+        margin-top: 10px;
+        font-size: 24px;
+        &::before {
+            content: attr(line)
+                '\00a0\00a0\00a0..........................................';
+            font-size: 16px;
+            position: absolute;
+            left: 0px;
+            z-index: -10;
+            line-height: 29px;
+            color: $light-theme-grey;
+
+        }
+    }
+
+    p {
+        background: white;
+        padding: 0 20px;
+        &.tab1 {
+            margin: 0 50px;
+        }
+        &.tab2 {
+            margin: 0 90px;
+        }
+        &.tab3 {
+            margin: 0 130px;
+        }
+        &.tab4 {
+            margin: 0 170px;
+        }
+    }
+
+    span {
+        &.comment {
+            color: $dark-theme-grey;
+        }
+        &.function {
+            color: $light-theme-grey;
+        }
+        &.function-name {
+            color: $light-theme-blue;
+        }
+        &.array-item {
+            color: $light-theme-pink;
+        }
+    }
     .wrapper {
         display: flex;
         min-height: 100%;
@@ -103,37 +94,129 @@ body {
         flex-direction: column;
         padding: 3em;
         position: relative;
-        .a {
-            color: red;
-            &::before {
-                content: '//';
-                width: 100px;
-                border-bottom: 1px dashed #454e61;
-                position: absolute;
-                line-height: 10px;
-                left: -200px;
+        .container {
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+            #main {
+                margin-top: 30px !important;
             }
         }
     }
 }
-.container {
-    margin: 0 auto;
-    width: 1440px;
-    padding: 0 20px;
-    position: relative;
-}
-@media screen and (max-width: 1400px) {
-    .container {
-        width: 970px;
-    }
-}
+
 @media screen and (max-width: 992px) {
-    .container {
-        width: 750px;
+    body {
+        h1 {
+            font-size: 20px;
+            &::before {
+                content: attr(line) '\00a0\00a0';
+                line-height: 20px;
+            }
+        }
+        h3 {
+            margin: 8px 0;
+
+            font-size: 16px;
+            &::before {
+                content: attr(line) '\00a0\00a0';
+                line-height: 16px;
+            }
+        }
+        .wrapper {
+            padding: 1em !important;
+        }
+        p {
+            background: white;
+            padding: 0;
+            &.tab1 {
+                margin: 0 20px;
+            }
+            &.tab2 {
+                margin: 0 40px;
+            }
+            &.tab3 {
+                margin: 0 55px;
+            }
+            &.tab4 {
+                margin: 0 80px;
+            }
+        }
     }
 }
-@media screen and (max-width: 767px) {
-    .container {
-        width: none;
+
+@media (prefers-color-scheme: light) {
+    body {
+        background: $light-theme-bg;
+        color: $light-theme-black;
+        h1 {
+            &::before {
+                color: $light-theme-grey;
+            }
+        }
+        h3 {
+            &::before {
+                color: $light-theme-grey;
+            }
+        }
+        p {
+            background: $light-theme-bg;
+        }
+        span {
+            &.comment {
+                color: $dark-theme-grey;
+            }
+            &.function {
+                color: $light-theme-grey;
+            }
+            &.function-name {
+                color: $light-theme-blue;
+            }
+            &.array-item {
+                color: $light-theme-pink;
+            }
+        }
+    }
+
+    .spalmalo {
+        fill: #636364;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background: $dark-theme-bg;
+        color: $dark-theme-white;
+        h1 {
+            &::before {
+                color: $dark-theme-number;
+            }
+        }
+        h3 {
+            &::before {
+                color: $dark-theme-number;
+            }
+        }
+        p {
+            background: $dark-theme-bg;
+        }
+        span {
+            &.comment {
+                color: #c1c1c1;
+            }
+            &.function {
+                color: $dark-theme-grey;
+            }
+            &.function-name {
+                color: $dark-theme-aquamarine;
+            }
+            &.array-item {
+                color: $dark-theme-orange;
+            }
+        }
+    }
+
+    .spalmalo {
+        fill: #dee2e3;
     }
 }

@@ -15,49 +15,117 @@
     <link href="/assets/favicons/favicon.ico" rel="shortcut icon">
     <link rel="stylesheet" href="/assets/css/reset.min.css">
     <link rel="stylesheet" href="/assets/css/style.min.css">
+    <script src="/assets/js/jquery-3.4.1.min.js"></script>
 </head>
 
 <body>
     <div class="wrapper">
         <div class="container">
-            <a class="logo" href="index.html">
-                <img src="/assets/images/logo-dark.svg" alt="Spalmalo logo">
-            </a>
-              <h1 line="1"><p class="tab1">def Spalmalo.Elixir.Team do</p></h1>
-              <h3 line="2"><p class="tab1" >&nbsp;</p></h3>
-              <h1 line="3"><p class="tab1"># remote developer team</p></h1>
-              <h3 line="4"><p class="tab1">&nbsp;</p></h3>
-
-
-              <h3 line="5" style="display: flex; flex-direction:row;"><p class="tab3">“What we can”  =  [</p><p class="tab3">“What we are using” = [</p></h3>
-              <h3 line="6"><p class="tab1">&nbsp;</p></h3>
-
-
-
-              <h3 line="7" style="display: flex; flex-direction:row;"><p class="tab4" style="width: 200px;">:blockchain,</p><p class="tab2">:elixir,</p></h3>
-              <h3 line="8" style="display: flex; flex-direction:row;"><p class="tab4" style="width: 200px;">:ethereum,</p><p class="tab2">:phoenix,</p></h3>
-              <h3 line="9" style="display: flex; flex-direction:row;"><p class="tab4" style="width: 200px;">:fintech,</p><p class="tab2">:ruby_on_rails</p></h3>
-              <h3 line="10" style="display: flex; flex-direction:row;"><p class="tab4" style="width: 200px;">:gambling,</p></h3>
-              <h3 line="11" style="display: flex; flex-direction:row;"><p class="tab4" style="width: 200px;">:distributed,</p><p class="">]</p></h3>
-              <h3 line="12" style="display: flex; flex-direction:row;"><p class="tab4" style="width: 200px;">:hiload,</p></h3>
-              <h3 line="13" style="display: flex; flex-direction:row;"><p class="tab4" style="width: 200px;">:e_commerce</p></h3>
-              <h3 line="14"><p class="tab1" >&nbsp;</p></h3>
-
-              <h3 line="15" style="display: flex; flex-direction:row;"><p class="tab3" style="width: 200px;">]</p></h3>
-              <h1 line="16"><p class="tab1">end</p></h1>
-              <h3 line="17"><p class="tab1" >&nbsp;</p></h3>
-              <h3 line="18"><p class="tab1">&nbsp;</p></h3>
-              <h1 line="19"><p class="tab1">def Contact.Us do</p></h1>
-              <h3 line="20"><p class="tab1">&nbsp;</p></h3>
-
-              <h3 line="21"><p class="tab2" >tallinn_estonia(mail: "konstantin@spalmalo", tel: "+372 514 5099")</p></h3>
-              <h3 line="22"><p class="tab2" >bishkek_kyrgyztan(mail: "adilet@spalmalo", tel: "+996 553131955")</p></h3>
-              <h3 line="23"><p class="tab1" >&nbsp;</p></h3>
-
-              <h1 line="24"><p class="tab1">end</p></h1>
-
+            <div id="logo">
+                <a href="index.html">
+                    <svg width="203" height="50" viewBox="0 0 203 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0)">
+                            <path fill-rule="evenodd" class="spalmalo" clip-rule="evenodd" d="M4.58317 26.7333C4.6921 28.795 5.15751 30.4683 5.97446 31.7533C7.5308 34.16 10.2771 35.3617 14.21 35.3617C15.971 35.3617 17.5768 35.0983 19.0259 34.5733C21.8233 33.55 23.2245 31.72 23.2245 29.0833C23.2245 27.105 22.632 25.6967 21.4437 24.855C20.2422 24.03 18.3608 23.315 15.796 22.705L11.0726 21.5917C7.98961 20.8667 5.80612 20.0683 4.52376 19.1917C2.31056 17.6783 1.20149 15.41 1.20149 12.395C1.20149 9.13167 2.29076 6.455 4.46764 4.36167C6.64618 2.26667 9.72749 1.22 13.7149 1.22C17.387 1.22 20.5063 2.13833 23.0727 3.97667C25.6391 5.815 26.9231 8.75167 26.9231 12.79H22.3415C22.1055 10.845 21.6055 9.355 20.838 8.315C19.4137 6.42 16.9926 5.47 13.5812 5.47C10.825 5.47 8.84452 6.08167 7.63972 7.30167C6.43328 8.52 5.83088 9.94 5.83088 11.555C5.83088 13.3333 6.5422 14.6367 7.9665 15.4617C8.90063 15.9883 11.0132 16.6483 14.3041 17.4383L19.1942 18.6017C21.551 19.1617 23.3697 19.9283 24.6538 20.8983C26.8686 22.5983 27.9744 25.0617 27.9744 28.2933C27.9744 32.315 26.5616 35.19 23.7328 36.92C20.909 38.6517 17.6214 39.5167 13.8799 39.5167C9.51458 39.5167 6.09989 38.3633 3.63089 36.0567C1.16353 33.7667 -0.0495207 30.6567 -8.54069e-06 26.7333H4.58152H4.58317ZM32.9273 12.0983H37.2381V15.6083C38.1227 14.4083 39.0899 13.4733 40.1379 12.8167C41.6265 11.825 43.3793 11.3333 45.3928 11.3333C48.3734 11.3333 50.9018 12.4833 52.9813 14.78C55.0609 17.08 56.1006 20.3633 56.1006 24.6333C56.1006 30.4033 54.6004 34.5233 51.6016 36.9933C49.697 38.56 47.4871 39.3433 44.9604 39.3433C42.9749 39.3433 41.313 38.9067 39.9679 38.035C39.1823 37.5383 38.3043 36.69 37.3371 35.4867V49.0117H32.9256V12.0983H32.9273ZM75.1215 22.4283C76.1332 22.2967 76.8116 21.87 77.1532 21.145C77.3496 20.7483 77.447 20.1783 77.447 19.4333C77.447 17.91 76.9139 16.8067 75.8461 16.12C74.7799 15.4333 73.2516 15.09 71.2612 15.09C68.9655 15.09 67.3349 15.72 66.3727 16.9783C65.8347 17.6733 65.4832 18.71 65.3214 20.0833H61.207C61.2878 16.8117 62.3342 14.5333 64.3493 13.255C66.3645 11.9717 68.7015 11.3317 71.3603 11.3317C74.4416 11.3317 76.9469 11.925 78.8696 13.1117C80.7808 14.2983 81.7331 16.145 81.7331 18.65V33.9067C81.7331 34.3683 81.8271 34.74 82.0169 35.0167C82.2034 35.2967 82.5979 35.4383 83.2052 35.4383C83.4258 35.437 83.6461 35.4247 83.8654 35.4017C84.1096 35.3733 84.3721 35.3383 84.6493 35.29V38.5767C83.9628 38.7767 83.4412 38.8983 83.0815 38.9483C82.5938 39.004 82.1033 39.0285 81.6126 39.0217C80.0942 39.0217 78.9901 38.4783 78.3035 37.3917C77.9454 36.8133 77.6929 35.9967 77.5443 34.9433C76.6482 36.1283 75.3559 37.16 73.6758 38.0333C71.9924 38.9067 70.139 39.3433 68.1139 39.3433C65.6812 39.3433 63.6908 38.6 62.1493 37.11C60.6062 35.6183 59.8355 33.755 59.8355 31.515C59.8355 29.0617 60.5947 27.1617 62.1114 25.81C63.6314 24.4617 65.6235 23.6317 68.0892 23.3183L75.1215 22.4283ZM88.8447 38.455H93.2529V2.13667H88.8447V38.455ZM99.5558 11.975H103.916V15.7317C104.961 14.4317 105.908 13.4817 106.758 12.89C108.211 11.8833 109.861 11.3817 111.708 11.3817C113.796 11.3817 115.479 11.9 116.753 12.9383C117.471 13.5317 118.125 14.4067 118.714 15.5583C119.692 14.1417 120.843 13.0917 122.166 12.4083C123.49 11.7233 124.975 11.3817 126.626 11.3817C130.153 11.3817 132.554 12.6667 133.827 15.2383C134.513 16.6217 134.858 18.485 134.858 20.825V38.4533H130.275V20.06C130.275 18.2967 129.837 17.0833 128.966 16.425C128.091 15.7667 127.025 15.435 125.768 15.435C124.036 15.435 122.548 16.02 121.298 17.1917C120.049 18.3617 119.422 20.3167 119.422 23.0517V38.4533H114.939V21.1717C114.939 19.375 114.73 18.065 114.302 17.24C113.634 16.005 112.384 15.3867 110.556 15.3867C108.889 15.3867 107.374 16.0383 106.011 17.34C104.647 18.64 103.964 20.9983 103.964 24.41V38.4533H99.5575V11.975H99.5558ZM155.564 22.4283C156.576 22.2967 157.254 21.87 157.597 21.145C157.794 20.7483 157.889 20.1783 157.889 19.4333C157.889 17.91 157.358 16.8067 156.289 16.12C155.222 15.4333 153.694 15.09 151.705 15.09C149.408 15.09 147.777 15.72 146.815 16.9783C146.279 17.6733 145.927 18.71 145.764 20.0833H141.649C141.73 16.8117 142.778 14.5333 144.792 13.255C146.807 11.9717 149.144 11.3317 151.803 11.3317C154.886 11.3317 157.389 11.925 159.315 13.1117C161.223 14.2983 162.177 16.145 162.177 18.65V33.9067C162.177 34.3683 162.27 34.74 162.458 35.0167C162.646 35.2967 163.042 35.4383 163.648 35.4383C163.844 35.4383 164.064 35.425 164.308 35.4017C164.552 35.3733 164.815 35.3383 165.092 35.29V38.5767C164.405 38.7767 163.885 38.8983 163.524 38.9483C163.036 39.004 162.546 39.0285 162.055 39.0217C160.537 39.0217 159.433 38.4783 158.748 37.3917C158.388 36.8133 158.134 35.9967 157.987 34.9433C157.091 36.1283 155.798 37.16 154.118 38.0333C152.436 38.9067 150.581 39.3433 148.556 39.3433C146.124 39.3433 144.133 38.6 142.592 37.11C141.049 35.6183 140.278 33.755 140.278 31.515C140.278 29.0617 141.037 27.1617 142.556 25.81C144.074 24.4617 146.066 23.6317 148.532 23.3183L155.564 22.4283ZM169.287 38.455H173.695V2.13667H169.289L169.287 38.455ZM199.122 14.6167C201.442 16.89 202.601 20.2333 202.601 24.645C202.601 28.9117 201.579 32.4367 199.534 35.22C197.493 38.0033 194.322 39.3917 190.024 39.3917C186.44 39.3917 183.595 38.1633 181.485 35.7C179.378 33.24 178.325 29.9333 178.325 25.7833C178.325 21.3367 179.435 17.795 181.659 15.16C183.877 12.5267 186.862 11.2083 190.607 11.2083C193.966 11.2083 196.804 12.345 199.123 14.6167" fill="#636364"/>
+                        </g>
+                        <defs>
+                            <clipPath id="clip0">
+                                <rect width="203" height="50" fill="white"/>
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </a>
+            </div>
+            <div id="main">
+                <div id="desktop">
+                    <h1 line="1"><p class="tab1"><span class="function">def<span class="function-name"> Spalmalo.Elixir.Team </span>do</span></p></h1>
+                    <h3 line="2"><p class="tab1" >&nbsp;</p></h3>
+                    <h1 line="3"><p class="tab1"><span class="comment"># remote developer team</span></p></h1>
+                    <h3 line="4"><p class="tab1">&nbsp;</p></h3>
+                    <h3 line="5" style="display: flex; flex-direction:row;"><p class="tab3">“What we can” <span class="function-name"> = </span> [</p><p class="tab1">“What we are using” <span class="function-name"> = </span> [</p></h3>
+                    <h3 line="6"><p class="tab1">&nbsp;</p></h3>
+                    <h3 line="7" style="display: flex; flex-direction:row;"><p class="tab4" style="width: 200px;"><span class="array-item">:blockchain</span>,</p><p class="tab1"><span class="array-item">:elixir</span>,</p></h3>
+                    <h3 line="8" style="display: flex; flex-direction:row;"><p class="tab4" style="width: 200px;"><span class="array-item">:ethereum</span>,</p><p class="tab1"><span class="array-item">:phoenix</span>,</p></h3>
+                    <h3 line="9" style="display: flex; flex-direction:row;"><p class="tab4" style="width: 200px;"><span class="array-item">:fintech</span>,</p><p class="tab1"><span class="array-item">:ruby_on_rails</span></p></h3>
+                    <h3 line="10" style="display: flex; flex-direction:row;"><p class="tab4" style="width: 200px;"><span class="array-item">:gambling</span>,</p></h3>
+                    <h3 line="11" style="display: flex; flex-direction:row;"><p class="tab4" style="width: 200px;"><span class="array-item">:distributed</span>,</p><p>]</p></h3>
+                    <h3 line="12" style="display: flex; flex-direction:row;"><p class="tab4" style="width: 200px;"><span class="array-item">:hiload</span>,</p></h3>
+                    <h3 line="13" style="display: flex; flex-direction:row;"><p class="tab4" style="width: 200px;"><span class="array-item">:e_commerce</span></p></h3>
+                    <h3 line="14"><p class="tab1" >&nbsp;</p></h3>
+                    <h3 line="15" style="display: flex; flex-direction:row;"><p class="tab3" style="width: 200px;">]</p></h3>
+                    <h1 line="16"><p class="tab1"><span class="function">end</span></p></h1>
+                    <h3 line="17"><p class="tab1" >&nbsp;</p></h3>
+                    <h3 line="18"><p class="tab1">&nbsp;</p></h3>
+                    <h1 line="19"><p class="tab1"><span class="function">def<span class="function-name"> Contact.Us </span>do</span></p></h1>
+                    <h3 line="20"><p class="tab1">&nbsp;</p></h3>
+                    <h3 line="21"><p class="tab2" ><span class="function-name">tallinn_estonia</span>(<span class="array-item">mail: </span>"konstantin@spalmalo", <span class="array-item">tel: </span>"+372 514 5099")</p></h3>
+                    <h3 line="22"><p class="tab2" ><span class="function-name">bishkek_kyrgyztan</span>(<span class="array-item">mail: </span>"adilet@spalmalo", <span class="array-item">tel: </span>"+996 553131955")</p></h3>
+                    <h3 line="23"><p class="tab1" >&nbsp;</p></h3>
+                    <h1 line="24"><p class="tab1"><span class="function">end</span></p></h1>
+                </div>
+                <div id="mobile">
+                    <h1 line="1"><p class="tab1"><span class="function">def<span class="function-name"> Spalmalo.Elixir.Team </span>do</span></p></h1>
+                    <h3 line="2"><p class="tab1" >&nbsp;</p></h3>
+                    <h1 line="3"><p class="tab1"><span class="comment"># remote developer team</span></p></h1>
+                    <h3 line="4"><p class="tab1">&nbsp;</p></h3>
+                    <h3 line="5"><p class="tab3">“What we can” <span class="function-name"> = </span> [</p></h3>
+                    <h3 line="6"><p class="tab1">&nbsp;</p></h3>
+                    <h3 line="7"><p class="tab4" style="width: 200px;"><span class="array-item">:blockchain</span>,</p></h3>
+                    <h3 line="8"><p class="tab4" style="width: 200px;"><span class="array-item">:ethereum</span>,</p></h3>
+                    <h3 line="9"><p class="tab4" style="width: 200px;"><span class="array-item">:fintech</span>,</p></h3>
+                    <h3 line="10"><p class="tab4" style="width: 200px;"><span class="array-item">:gambling</span>,</p></h3>
+                    <h3 line="11"><p class="tab4" style="width: 200px;"><span class="array-item">:distributed</span>,</p></h3>
+                    <h3 line="12"><p class="tab4" style="width: 200px;"><span class="array-item">:hiload</span>,</p></h3>
+                    <h3 line="13"><p class="tab4" style="width: 200px;"><span class="array-item">:e_commerce</span></p></h3>
+                    <h3 line="14"><p class="tab1" >&nbsp;</p></h3>
+                    <h3 line="15" ><p class="tab3">]</p></h3>
+                    <h3 line="16"><p class="tab1" >&nbsp;</p></h3>
+                    <h3 line="17"><p class="tab3">“What we are using” <span class="function-name"> = </span> [</p></h3>
+                    <h3 line="18"><p class="tab1">&nbsp;</p></h3>
+                    <h3 line="19" ><p class="tab4"><span class="array-item">:elixir</span>,</p></h3>
+                    <h3 line="20" ><p class="tab4"><span class="array-item">:phoenix</span>,</p></h3>
+                    <h3 line="21" ><p class="tab4"><span class="array-item">:ruby_on_rails</span></p></h3>
+                    <h3 line="22"><p class="tab1" >&nbsp;</p></h3>
+                    <h3 line="23" ><p class="tab3">]</p></h3>
+                    <h3 line="24"><p class="tab1" >&nbsp;</p></h3>
+                    <h1 line="25"><p class="tab1"><span class="function">end</span></p></h1>
+                    <h3 line="26"><p class="tab1" >&nbsp;</p></h3>
+                    <h3 line="27"><p class="tab1">&nbsp;</p></h3>
+                    <h1 line="28"><p class="tab1"><span class="function">def<span class="function-name"> Contact.Us </span>do</span></p></h1>
+                    <h3 line="29"><p class="tab1">&nbsp;</p></h3>
+                    <h3 line="30"><p class="tab2" ><span class="function-name">tallinn_estonia </span>(</p></h3>
+                    <h3 line="31"><p class="tab1" >&nbsp;</p></h3>
+                    <h3 line="32"><p class="tab3"><span class="array-item">mail: </span>"konstantin@spalmalo",</p></h3>
+                    <h3 line="33"><p class="tab3"><span class="array-item">tel: </span>"+372 514 5099"</p></h3>
+                    <h3 line="34"><p class="tab1" >&nbsp;</p></h3>
+                    <h3 line="35"><p class="tab2">)</p></h3>
+                    <h3 line="36"><p class="tab1" >&nbsp;</p></h3>
+                    <h3 line="37"><p class="tab2" ><span class="function-name">bishkek_kyrgyztan </span>(</p></h3>
+                    <h3 line="38"><p class="tab1" >&nbsp;</p></h3>
+                    <h3 line="39"><p class="tab3"><span class="array-item">mail: </span>"adilet@spalmalo",</p></h3>
+                    <h3 line="40"><p class="tab3"><span class="array-item">tel: </span>"+996 553131955"</p></h3>
+                    <h3 line="41"><p class="tab1" >&nbsp;</p></h3>
+                    <h3 line="42"><p class="tab2">)</p></h3>
+                    <h3 line="43"><p class="tab1" >&nbsp;</p></h3>
+                    <h1 line="44"><p class="tab1"><span class="function">end</span></p></h1>
+                </div>
+            </div>
         </div>
     </div>
+    <script>
+        function screenClass() {
+            if($(window).innerWidth() > 960) {
+                $('#desktop').show();
+                $('#mobile').hide();
+            } else {
+                $('#desktop').hide();
+                $('#mobile').show();
+            }
+        }
+        screenClass();
+        $(window).bind('resize',function(){
+            screenClass();
+        });
+    </script>
 </body>
 
 </html>
