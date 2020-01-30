@@ -19,6 +19,7 @@ $light-theme-pink: #e96a8d;
 @font-face {
     font-family: SFProTextRegular;
     src: url(../fonts/SF-PRO-TEXT-REGULAR.OTF);
+    font-display: swap;
 }
 
 body {
@@ -33,7 +34,7 @@ body {
             opacity: 0.8;
         }
     }
-    h1 {
+    .title1 {
         font-size: 40px;
         &::before {
             content: attr(line)
@@ -46,7 +47,7 @@ body {
             color: $light-theme-grey;
         }
     }
-    h3 {
+    .title2 {
         margin-top: 10px;
         font-size: 24px;
         &::before {
@@ -103,7 +104,7 @@ body {
             margin: 0 auto;
             padding: 0 20px;
             position: relative;
-            #main {
+            .main {
                 margin-top: 30px !important;
             }
             .d-flex {
@@ -119,16 +120,15 @@ body {
 
 @media screen and (max-width: 992px) {
     body {
-        h1 {
+        .title1 {
             font-size: 20px;
             &::before {
                 content: attr(line) '\00a0\00a0';
                 line-height: 20px;
             }
         }
-        h3 {
+        .title2 {
             margin: 8px 0;
-
             font-size: 16px;
             &::before {
                 content: attr(line) '\00a0\00a0';
@@ -164,12 +164,12 @@ body {
         a {
             color: $light-theme-black;
         }
-        h1 {
+        .title1 {
             &::before {
                 color: $light-theme-grey;
             }
         }
-        h3 {
+        .title2 {
             &::before {
                 color: $light-theme-grey;
             }
@@ -205,12 +205,12 @@ body {
         a {
             color: $dark-theme-white;
         }
-        h1 {
+        .title1 {
             &::before {
                 color: $dark-theme-number;
             }
         }
-        h3 {
+        .title2 {
             &::before {
                 color: $dark-theme-number;
             }
