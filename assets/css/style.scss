@@ -133,7 +133,7 @@ body {
             &::before {
                 content: attr(line) '\00a0\00a0';
                 line-height: 16px;
-            }
+            } 
         }
         .wrapper {
             padding: 1em !important;
@@ -142,16 +142,16 @@ body {
             background: white;
             padding: 0;
             &.tab1 {
-                margin: 0 20px;
+                margin: 0 15px;
             }
             &.tab2 {
-                margin: 0 40px;
+                margin: 0 30px;
             }
             &.tab3 {
-                margin: 0 55px;
+                margin: 0 45px;
             }
             &.tab4 {
-                margin: 0 80px;
+                margin: 0 60px;
             }
         }
     }
